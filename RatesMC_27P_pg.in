@@ -1,13 +1,13 @@
-19Ne(p,g)20Na
+27P(p,g)28S
 ********************************************************************************************************************************************************************
 1H              ! Zproj                           (or nuclide's name to use AME2020)
-19Ne            ! Ztarget
+27P             ! Ztarget
 0               ! Zexitparticle                   (=0 when only 2 channels open)
 1H              ! Aproj                           (input either NUCLEAR MASS in amu, or the nuclide's name, e.g. 23Na)
-19Ne            ! Atarget   
+27P             ! Atarget   
 0               ! Aexitparticle                   (=0 when only 2 channels open)
 1H              ! Jproj                           (or nuclide's name to use NuBase 2020)
-19Ne            ! Jtarget
+27P             ! Jtarget
 0               ! Jexitparticle                   (=0 when only 2 channels open)
 AME             ! projectile separation energy    (NUCLEAR Q value; enter AME if nuclide names are used)
 AME             ! exit particle separation energy (=0 when only 2 channels open; enter AME if nuclide names are used)
@@ -19,33 +19,32 @@ AME             ! exit particle separation energy (=0 when only 2 channels open;
 0               ! =0 for rate output at all temperatures; =NT for rate output at selected temperatures
 0 0             ! (wg, E): =0 for no correlation; =1 for correlation
 ********************************************************************************************************************************************************************
-Non-resonant table  
+Non-resonant table   
 Enter comma-separated energies (keV) on 1st line, S-factors (keV.b) on 2nd line, and fractional uncertainties on 3rd line
-0       4       104     204     304     404     504     604     704     804     904     1004   1504     2004    2504     
-0.58    0.632   0.6489  0.6703  0.6942  0.7198  0.7466  0.7744  0.8030  0.8324  0.8623  0.8928 1.052    1.219   1.392
--1.50   -1.50   -1.50   -1.50   -1.50   -1.50   -1.50   -1.50   -1.50   -1.50   -1.50   -1.50   -1.50   -1.50   -1.50    
-0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
-0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       
+0       7       107     207     307     407     507     607     707     807     907     1007    1207    1507    2007    2507    3007    3507    4007
+25.0    24.9    24.6    24.3    24.1    23.8    23.6    23.3    23.1    22.9    22.7    22.6    22.2    21.8    21.1    20.5    20.0    19.5    19.1
+-2.0    -2.0    -2.0    -2.0    -2.0    -2.0    -2.0    -2.0    -2.0    -2.0    -2.0    -2.0    -2.0    -2.0    -2.0    -2.0    -2.0    -2.0    -2.0   
+0  0
+0  0
+0  0
 ********************************************************************************************************************************************************************
 Resonant Contribution
 Note: G1 = entrance channel, G2 = exit channel, G3 = spectator channel !! Ecm, Exf in (keV); wg, Gx in (eV) !!
 Note: if Er<0, theta^2=C2S*theta_sp^2 must be entered instead of entrance channel partial width; negative values of Dwg, DGx indicate factor uncertainties
-Ecm(keV) DEcm(keV) wg(eV)     Dwg(eV)    J   G1(eV)    DG1(eV)   L1  G2(eV)    DG2(eV)   L2  G3(eV)    DG3(eV)   L3  Exf(keV) Int  Corr/Frac
-456.0    3.0       0.017      0.008      3.0 0         0         0   0         0         0   0         0         0   798.6    0 
-664.0    8.0       0          0          3.0 0.026     -3.0      3   0.0218    -1.7      1   0         0         0   0.0      1    
-797.0    5.0       0          0          1.0 19.8e3    2.0e3     0   0.035     -1.7      1   0         0         0   0.0      1         
-889.0    5.0       0          0          0.0 24e3      12e3      0   0.073     -1.7      1   0         0         0   984.3    1 
+Ecm(keV)  DEcm(keV)   wg(eV)    Dwg(eV)   J     G1(eV)   DG1(eV)   L1    G2(eV)   DG2(eV)   L2    G3(eV)   DG3(eV)   L3      Exf(keV)    Int     Corr/Frac
+ 946      175         0         0         0     2937     -1.7      0     5.3e-4   -2        2     0        0         0       1507        1
+1476      25          0         0         4     0.46     -2        4     4.3e-3   -3        2     0        0         0       1507        1
+1860      36          0         0         2     2526     -1.7      2     0.05     -5        1     0        0         0       0.0         1
 ********************************************************************************************************************************************************************
 Upper Limits of Resonances
 Note: enter partial width upper limit by chosing non-zero value for PT, where PT=<theta^2> for particles and PT=<B> for g-rays [enter: "upper_limit  0"]; 
 Note: for each resonance: # upper limits < # open channels! negative values of Dwg, DGx, DPT indicate factor uncertainties 
 Ecm(keV) DEcm(keV) J   G1(eV)    DG1(eV) L1  PT       DPT      G2(eV)    DG2(eV)   L2  PT       DPT      G3(eV)    DG3(eV)   L3  PT       DPT      Exf(keV) Int  Frac
-!0.00     0.00      0   0.00E+00  0       0   0.0E+00  0.0E+00  0.0E+00   0.0E+00  0   0        0        0.0E+00   0.0E+00   0   0        0        0        0    
+! 0.00     0.00      0   0.00E+00  0       0   0.0E+00  0.0E+00  0.0E+00   0.0E+00   0   0        0        0         0         0   0        0        0        0    
 ********************************************************************************************************************************************************************
 Interference between Resonances [numerical integration only]
 Note: + for positive, - for negative interference; +- if interference sign is unknown
-Ecm(keV) DEcm(keV) Jr   G1(eV)    DG1(eV)   L1   PT      DPT       G2(eV)     DG2(eV)    L2  PT       DPT    G3(eV)    DG3(eV)   L3  PT   DPT    Exf  
+Ecm(keV) DEcm(keV) Jr   G1(eV)    DG1(eV)   L1   PT   DPT    G2(eV)     DG2(eV)    L2  PT	DPT    G3(eV)    DG3(eV)   L3  PT   DPT    Exf(keV)  
 !+- 
 0.0      0.0       0.0  0.0       0.0       0    0.0  0.0    0.0        0.0        0   0    0.0    0.0       0.0       0   0    0.0    0.0  
 0.0      0.0       0.0  0.0       0.0       0    0.0  0.0    0.0        0.0        0   0    0.0    0.0       0.0       0   0    0.0    0.0  
@@ -56,14 +55,12 @@ T9      Min     Max
 0.01    0.0     0.0
 0.1     0.0     0.0
 ********************************************************************************************************************************************************************
-Comments:
-1. Evaluator: Kiana Setoodehnia, February 14, 2025. 
-2. The spin-parities and energies of the resonances are evaluated by K. Setoodehnia based on D. R. Tilley et al., Nucl. Phys. A 636 (1998) 249 and the available 
-   articles in the XUNDL database.  
-3. The spectroscopic factor for the 663-keV resonance with J^Pi=3- is from H. T. Fortune and R. R. Betts, Phys. Rev. C 10 (1974) 1292.
-4. The gamma-ray partial widths for the resonances come from those of the mirror state scaled for the 20Na resonance energies. The half-lives of the mirror states 
-   are from D. R. Tilley, C. Cheves, J. Kelley, S. Raman, and H. Weller, Nucl. Phys. A 636 (1998) 249.  
-5. The proton widths are measured by R. Coszach et al., Phys. Rev. C 50 (1994) 1695 for the 797-keV and 888-keV resonances, and by J. Belarge et al.,
-   Phys. Rev. Lett. 117 (2016) 182701 for the 888-keV resonance.
-6. The energy and strength for the 456-keV resonance was directly measured by R. Wilkinson et al., Phys. Rev. Lett. 119 (2017) 242701.
-7. The experimental rate agrees with the TALYS rate at 10 GK within the uncertainties. Therefore, no high-temperature rate matching is needed.
+Comments: [Evaluator: Christian Iliadis; Date: 11/19/2024]
+1. Er = 946 keV: calculated using the predicted excitation energy in Herndl et al. 1995; their Coulomb shift calculations reproduce the experimental first-excited
+   state energy in 28S, and the first- and second-excited state energies in the 28Mg mirror within 50 keV; the large uncertainty in the resonance energy derives
+   mainly from that of the Q value.
+2. Er = 1476 and 1860 keV: the resonance energies are equal to the beta-delayed proton decay energies measured in Gillespie et al. 2022.
+3. The proton widths of the resonances are estimated using the shell-model spectroscopic factors of Herndl et al. 1995 and Gillespie et al. 2022.
+4. The gamma-ray partial widths of the resonances are averages of the shell-model results of Herndl et al. 1995 and the values calculated from the measured 
+   lifetimes of the 28Mg mirror states.
+5. The direct capture S factor is estimated using the shell-model spectroscopic factors of Herndl et al. 1995.

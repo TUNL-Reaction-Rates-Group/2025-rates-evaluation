@@ -1,0 +1,82 @@
+25Al(p,g)26Si
+********************************************************************************************************************************************************************
+1H              ! Zproj                           (or nuclide's name to use AME2020)
+25Al            ! Ztarget
+0               ! Zexitparticle                   (=0 when only 2 channels open)
+1H              ! Aproj                           (input either NUCLEAR MASS in amu, or the nuclide's name, e.g. 23Na)
+25Al            ! Atarget   
+0               ! Aexitparticle                   (=0 when only 2 channels open)
+1H              ! Jproj                           (or nuclide's name to use NuBase 2020)
+25Al            ! Jtarget
+0               ! Jexitparticle                   (=0 when only 2 channels open)
+AME             ! projectile separation energy    (NUCLEAR Q value; enter AME if nuclide names are used)
+0               ! exit particle separation energy (=0 when only 2 channels open; enter AME if nuclide names are used)
+1.25            ! Radius parameter R0 (fm)
+2               ! Gamma-ray channel number        (=2 if ejectile is a g-ray; =3 otherwise)
+********************************************************************************************************************************************************************
+1.0             ! Minimum energy for numerical integration (keV)
+50000           ! Number of random samples (>5000 for better statistics)
+0               ! =0 for rate output at all temperatures; =NT for rate output at selected temperatures
+0 0             ! (wg, E): =0 for no correlation; =1 for correlation
+********************************************************************************************************************************************************************
+Non-resonant table  
+Enter comma-separated energies (keV) on 1st line, S-factors (keV.b) on 2nd line, and fractional uncertainties on 3rd line
+0.0000 5.0000 105.0000 205.0000 305.0000 405.0000 505.0000 605.0000 705.0000 805.0000 905.0000 1005.0000 1105.0000 1205.0000 1305.0000 1405.0000 1505.0000 1605.0000 1705.0000 1805.0000 1905.0000 2005.0000 2105.0000 2205.0000 2305.0000 2405.0000 
+33.6700 33.6700 33.2600 32.9200 32.6300 32.3700 32.1400 31.9300 31.7400 31.5600 31.4000 31.2500 31.1100 30.9800 30.8500 30.7300 30.6100 30.5000 30.4000 30.2900 30.1900 30.0900 30.0000 29.9000 29.8100 29.7200 
+-1.3000 -1.3000 -1.3000 -1.3000 -1.3000 -1.3000 -1.3000 -1.3000 -1.3000 -1.3000 -1.3000 -1.3000 -1.3000 -1.3000 -1.3000 -1.3000 -1.3000 -1.3000 -1.3000 -1.3000 -1.3000 -1.3000 -1.3000 -1.3000 -1.3000 -1.3000
+0  0
+0  0
+0  0
+********************************************************************************************************************************************************************
+Resonant Contribution
+Note: G1 = entrance channel, G2 = exit channel, G3 = spectator channel !! Ecm, Exf in (keV); wg, Gx in (eV) !!
+Note: if Er<0, theta^2=C2S*theta_sp^2 must be entered instead of entrance channel partial width; negative values of Dwg, DGx indicate factor uncertainties
+Ecm(keV) DEcm(keV) wg(eV)     Dwg(eV)    J   G1(eV)    DG1(eV)   L1  G2(eV)    DG2(eV)   L2  G3(eV)    DG3(eV)   L3  Exf(keV) Int  Corr/Frac
+163.47   0.32      0.0        0.0        1   7e-9      -6.0      2   0.12      -2.0      1   0         0         0   1797.3   1
+377.37   0.32      0.0        0.0        0   3.3e-3    -2.0      2   8.8e-3    -2.0      2   0         0         0   1797.3   1
+416.7    0.8       0.0        0.0        3   3.5       -1.8      0   46.4e-3   -1.47     1   0         0         0   4187.77  1
+782.6    2.4       0.0        0.0        2   53.0      -6.0      0   9.6e-2    -2.0      1   0         0         0   1797.3   1
+870.0    2.9       0.0        0.0        4   2.4       -6.0      2   2.4e-2    -2.0      1   0         0         0   1797.3   1
+948.4    2.8       0.0        0.0        1   15.0      -6.0      2   0.11      -2.0      1   0         0         0   1797.3   1
+********************************************************************************************************************************************************************
+Upper Limits of Resonances
+Note: enter partial width upper limit by chosing non-zero value for PT, where PT=<theta^2> for particles and PT=<B> for g-rays [enter: "upper_limit  0"]; 
+Note: for each resonance: # upper limits < # open channels! negative values of Dwg, DGx, DPT indicate factor uncertainties 
+Ecm(keV) DEcm(keV) J   G1(eV)    DG1(eV) L1  PT       DPT      G2(eV)    DG2(eV)   L2  PT       DPT      G3(eV)    DG3(eV)   L3  PT       DPT      Exf(keV) Int  Frac
+!0.00     0.00      0   0.00E+00  0       0   0.0E+00  0.0E+00  0.0E+00   0.0E+00   0   0        0        0         0         0   0        0        0        0
+********************************************************************************************************************************************************************
+Interference between Resonances [numerical integration only]
+Note: + for positive, - for negative interference; +- if interference sign is unknown
+Ecm(keV) DEcm(keV) Jr   G1(eV)    DG1(eV)   L1   PT   DPT    G2(eV)     DG2(eV)    L2  PT	DPT    G3(eV)    DG3(eV)   L3  PT   DPT    Exf(keV)  
+!+- 
+0.0      0.0       0.0  0.0       0.0       0    0.0  0.0    0.0        0.0        0   0    0.0    0.0       0.0       0   0    0.0    0.0  
+0.0      0.0       0.0  0.0       0.0       0    0.0  0.0    0.0        0.0        0   0    0.0    0.0       0.0       0   0    0.0    0.0  
+********************************************************************************************************************************************************************
+Input file and PDF at NT selected temperatures only
+Note: default values are used for Input file range if Min=Max=0.0
+T9      Min     Max
+0.01    0.0     0.0
+0.1     0.0     0.0
+********************************************************************************************************************************************************************
+Comments:
+Evaluated by Caleb Marshall 2024
+1) All energies are from Basunia 2016 and are based on least square fits to the observed gamma transitions. See also Chipps 2016.
+1) Direct capture was calculated from C2S values from 25Mg(d, p): Burlein 1984, Arciszewski 1984, and Hamill 2020.
+2) All shell model calculations were taken from Richter 2011.
+3) For the 163 keV resonance, all information was taken from Richter 2011. DWBA analysis of Hamill 2020 is inconclusive.
+4) For the 377 keV resonance, the mirror C2S from Hamill 2020 was used.
+4) For the 416 keV resonance, the proton partial width is a weighted average of Peplowski 2009, Temanson 2023, and mirror C2S.
+5) For the 416 keV resonance, the gamma ray partial width is a weighted average between the value infered from Gg/Gp and Gp.
+Gg/Gp is a weighted average of Perello 2022 and beta decay studies see below. Gp is a weighted average of the C2S from the
+mirror (Burlein 1984, Arciszewski 1984, Hamill 2020) and 25Al(d,n) of Peplowski 2009 and Temanson 2023. Gg is then the
+weighted average of the lifetime measurements of the mirror state (Ex=6125 keV 26Mg) (Glatz 1986, Canete 2021) with that deduced from
+Gg/Gp * Gp.
+6) The Gg/Gp ratio was evaluted from the beta decay gamma and proton intensities. The gamma intensities are averaged from
+Perez-Loureiro 2016 and Liang 2020 and then converted using the branching ratio estimate of Wrede 2009,
+while the proton intensities come from Thomas 2004 and Liang 2020 (see also Janiak 2017).
+7) 782, 870, and 948 keV states were taken from the shell model. 870 and 948 keV states contradict assigned spin parities
+are only used as a rough estimate for the transition to HF calculations.
+8) Proposed level at 5668 keV by Canete 2023 was excluded since evidence of its spin parity and thus its mirror assignment is
+weak. The evidence for its existence is stronger, but still tentative. The proposed mirror state at 5711 keV state in 26Mg
+is most most likely negative parity based on Bhattacharjee 2014, Burlein 1984, and Arciszewski 1984. The l=1 assignment
+in Canete 2021 is in tension with Burlein 1984 and Arciszewski 1984 who see evidence of a weak l=3 compenent of the unresolved doublet.

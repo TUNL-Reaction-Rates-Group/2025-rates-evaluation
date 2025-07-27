@@ -1,0 +1,148 @@
+29Si(p,g)30P
+********************************************************************************************************************************************************************
+1H              ! Zproj                              (or nuclide's name to use AME2020)
+29Si            ! Ztarget                            
+0               ! Zexitparticle                      (=0 when only 2 channels open)
+1H              ! Aproj                              (input either NUCLEAR MASS in amu, or the nuclide's name, e.g. 23Na)
+29Si            ! Atarget                            
+0               ! Aexitparticle                      (=0 when only 2 channels open)
+1H              ! Jproj                              (or nuclide's name to use NuBase 2020)
+29Si            ! Jtarget                            
+0               ! Jexitparticle                      (=0 when only 2 channels open)
+AME             ! projectile separation E (keV)      (NUCLEAR Q value; enter AME if nuclide names are used)
+0               ! exit-particle separation E (keV)   (=0 when only 2 channels open; enter AME if nuclide names are used)
+1.25            ! Radius parameter R0 (fm)
+2               ! Gamma-ray channel number           (=2 if ejectile is a g-ray; =3 otherwise)
+********************************************************************************************************************************************************************
+1.0             ! Minimum energy for numerical integration (keV)
+50000           ! Number of random samples (>5000 for better statistics)
+0               ! =0 for rate output at all temperatures; =NT for rate output at selected temperatures
+1 0             ! (wg, E): =0 for no correlation; =1 for correlation
+********************************************************************************************************************************************************************
+Non-resonant table  
+Enter comma-separated energies (keV) on 1st line, S-factors (keV.b) on 2nd line, and fractional uncertainties on 3rd line
+0        6.0     106.0    206.0    406.0    806.0    1206    1806    2206    2706    3006    3406    4006    4406    4806    4906
+123.9    123.8   121.3    120.0    118.4    116.5    115.1   113.2   112.0   110.4   109.4   108.1   106.0   104.5   103.0   102.6
+ -1.3    -1.3    -1.3     -1.3     -1.3     -1.3     -1.3    -1.3    -1.3    -1.3    -1.3    -1.3    -1.3    -1.3    -1.3    -1.3    
+0  0
+0  0
+0  0
+********************************************************************************************************************************************************************
+Resonant Contribution
+Note: G1 = entrance channel, G2 = exit channel, G3 = spectator channel !! Ecm, Exf in (keV); wg, Gx in (eV) !!
+Note: if Er<0, theta^2=C2S*theta_sp^2 must be entered instead of entrance channel partial width; negative values of Dwg, DGx indicate factor uncertainties
+Ecm(keV) DEcm(keV) wg(eV)     Dwg(eV)    J   G1(eV)    DG1(eV)   L1  G2(eV)    DG2(eV)   L2  G3(eV)    DG3(eV)   L3  Exf(keV) Int   Corr/Frac
+ 214.7   3.0       0          0          3    1.3e-7   1.0e-7    2   1.0       0.001     1   0         0         0   0        0
+ 303.4   1.0       8.8e-5     1.5e-5     0    0        0         0   0         0         0   0         0         0   0        0     w
+ 314.2   0.6       0.0207     0.0027     0    0        0         0   0         0         0   0         0         0   0        0     w
+ 402.9   0.6       0.220      0.025      0    0        0         0   0         0         0   0         0         0   0        0     w
+ 675.1   0.7       0.27545    0.063      0    0        0         0   0         0         0   0         0         0   0        0     w
+ 704.8   0.4       0.10017    0.02       0    0        0         0   0         0         0   0         0         0   0        0     w
+ 886.9   0.4       0.093139   0.019      0    0        0         0   0         0         0   0         0         0   0        0     w
+ 924.9   0.4       0.042368   8.46e-3    0    0        0         0   0         0         0   0         0         0   0        0     w
+1004.4   0.5       0.0063097  2.5e-3     0    0        0         0   0         0         0   0         0         0   0        0     w
+1073.4   0.6       0.038058   8.4e-3     0    0        0         0   0         0         0   0         0         0   0        0     w
+1258.8   0.4       0.33956    0.063      0    0        0         0   0         0         0   0         0         0   0        0     w
+1280.1   0.5       0.14823    0.063      0    0        0         0   0         0         0   0         0         0   0        0     w
+1282.3   0.6       0.50880    0.19       0    0        0         0   0         0         0   0         0         0   0        0     w
+1327.0   0.4       0.72113    0.19       0    0        0         0   0         0         0   0         0         0   0        0     w
+1385.0   0.5       0.0063097  2.5e-3     0    0        0         0   0         0         0   0         0         0   0        0     w
+1421.7   0.4       0.19034    0.042      0    0        0         0   0         0         0   0         0         0   0        0     w
+1451.7   0.5       0.019034   6.3e-3     0    0        0         0   0         0         0   0         0         0   0        0     w
+1455.7   0.4       0.59391    0.106      0    0        0         0   0         0         0   0         0         0   0        0     w
+1525.8   0.5       0.012722   4.2e-3     0    0        0         0   0         0         0   0         0         0   0        0     w
+1582.6   0.6       0.84835    0.25       0    0        0         0   0         0         0   0         0         0   0        0     w
+1609.7   0.5       0.19034    0.042      0    0        0         0   0         0         0   0         0         0   0        0     w
+1614.2   0.5       0.099631   0.019      0    0        0         0   0         0         0   0         0         0   0        0     w
+1629.1   0.4       1.1667     0.30       0    0        0         0   0         0         0   0         0         0   0        0     w
+1688.7   0.5       0.40060    0.15       0    0        0         0   0         0         0   0         0         0   0        0     w
+1689.2   0.4       0.99631    0.30       0    0        0         0   0         0         0   0         0         0   0        0     w
+1711.6   0.5       0.16924    0.063      0    0        0         0   0         0         0   0         0         0   0        0     w
+1713.0   0.5       0.14823    0.063      0    0        0         0   0         0         0   0         0         0   0        0     w
+1790.1   0.5       0.080129   0.021      0    0        0         0   0         0         0   0         0         0   0        0     w
+1900.8   0.7       0.27040    0.062      0    0        0         0   0         0         0   0         0         0   0        0     w
+1967.2   0.5       0.12722    0.032      0    0        0         0   0         0         0   0         0         0   0        0     w
+1969.2   0.5       0.38058    0.095      0    0        0         0   0         0         0   0         0         0   0        0     w
+1986.6   0.5       0.097107   0.024      0    0        0         0   0         0         0   0         0         0   0        0     w
+2011.7   0.5       0.67902    0.17       0    0        0         0   0         0         0   0         0         0   0        0     w
+2042.7   0.5       0.36057    0.09       0    0        0         0   0         0         0   0         0         0   0        0     w
+2051.0   0.5       0.67100    0.17       0    0        0         0   0         0         0   0         0         0   0        0     w
+2094.9   0.5       0.055090   0.014      0    0        0         0   0         0         0   0         0         0   0        0     w
+2156.0   0.5       0.23037    0.058      0    0        0         0   0         0         0   0         0         0   0        0     w
+2159.4   0.5       0.042061   0.011      0    0        0         0   0         0         0   0         0         0   0        0     w
+2165.7   0.5       0.97107    0.24       0    0        0         0   0         0         0   0         0         0   0        0     w
+2193.1   0.5       0.051078   0.013      0    0        0         0   0         0         0   0         0         0   0        0     w
+2233.0   0.5       0.048075   0.012      0    0        0         0   0         0         0   0         0         0   0        0     w
+2290.5   0.5       0.10017    0.025      0    0        0         0   0         0         0   0         0         0   0        0     w
+2327.6   0.5       0.29042    0.073      0    0        0         0   0         0         0   0         0         0   0        0     w
+2328.5   0.5       0.38058    0.095      0    0        0         0   0         0         0   0         0         0   0        0     w
+2403.4   0.5       0.74115    0.185      0    0        0         0   0         0         0   0         0         0   0        0     w
+2408.0   1.0       0.11018    0.028      0    0        0         0   0         0         0   0         0         0   0        0     w
+2414.1   0.5       0.44072    0.11       0    0        0         0   0         0         0   0         0         0   0        0     w
+2421.0   0.5       0.076116   0.019      0    0        0         0   0         0         0   0         0         0   0        0     w
+2502.0   3.0       0.63097    0.16       0    0        0         0   0         0         0   0         0         0   0        0     w
+2513.0   3.0       0.27040    0.068      0    0        0         0   0         0         0   0         0         0   0        0     w
+2558.0   3.0       0.40060    0.1        0    0        0         0   0         0         0   0         0         0   0        0     w
+2572.0   3.0       0.15021    0.038      0    0        0         0   0         0         0   0         0         0   0        0     w
+2594.0   3.0       0.066099   0.017      0    0        0         0   0         0         0   0         0         0   0        0     w
+2613.0   3.0       0.40060    0.1        0    0        0         0   0         0         0   0         0         0   0        0     w
+2678.0   3.0       0.33054    0.083      0    0        0         0   0         0         0   0         0         0   0        0     w
+2683.0   3.0       0.070111   0.018      0    0        0         0   0         0         0   0         0         0   0        0     w
+2685.0   3.0       2.8041     0.7        0    0        0         0   0         0         0   0         0         0   0        0     w
+2726.0   3.0       0.65098    0.16       0    0        0         0   0         0         0   0         0         0   0        0     w
+2757.0   3.0       0.030043   0.008      0    0        0         0   0         0         0   0         0         0   0        0     w
+2758.0   3.0       0.067100   0.017      0    0        0         0   0         0         0   0         0         0   0        0     w
+2759.0   3.0       0.25039    0.063      0    0        0         0   0         0         0   0         0         0   0        0     w
+2793.0   3.0       0.25039    0.063      0    0        0         0   0         0         0   0         0         0   0        0     w
+2805.0   3.0       0.084132   0.021      0    0        0         0   0         0         0   0         0         0   0        0     w
+2816.0   3.0       0.13020    0.033      0    0        0         0   0         0         0   0         0         0   0        0     w
+2833.0   3.0       0.028041   0.007      0    0        0         0   0         0         0   0         0         0   0        0     w
+2839.0   3.0       0.82130    0.21       0    0        0         0   0         0         0   0         0         0   0        0     w
+2858.0   3.0       0.47075    0.12       0    0        0         0   0         0         0   0         0         0   0        0     w
+2891.0   3.0       0.15021    0.038      0    0        0         0   0         0         0   0         0         0   0        0     w
+2933.0   3.0       0.51078    0.13       0    0        0         0   0         0         0   0         0         0   0        0     w
+2937.0   3.0       0.078118   0.02       0    0        0         0   0         0         0   0         0         0   0        0     w
+2989.0   3.0       0.10017    0.03       0    0        0         0   0         0         0   0         0         0   0        0     w
+3026.0   3.0       0.42061    0.11       0    0        0         0   0         0         0   0         0         0   0        0     w
+3039.0   3.0       0.16022    0.04       0    0        0         0   0         0         0   0         0         0   0        0     w
+3049.0   3.0       0.51078    0.13       0    0        0         0   0         0         0   0         0         0   0        0     w
+3054.0   3.0       0.32053    0.08       0    0        0         0   0         0         0   0         0         0   0        0     w
+3069.0   3.0       0.91156    0.23       0    0        0         0   0         0         0   0         0         0   0        0     w
+3076.0   3.0       0.57092    0.14       0    0        0         0   0         0         0   0         0         0   0        0     w
+********************************************************************************************************************************************************************
+Upper Limits of Resonances
+Note: enter partial width upper limit by chosing non-zero value for PT, where PT=<theta^2> for particles and PT=<B> for g-rays [enter: "upper_limit  0"]; 
+Note: for each resonance: # upper limits < # open channels! negative values of Dwg, DGx, DPT indicate factor uncertainties 
+Ecm(keV) DEcm(keV) J    G1(eV)    DG1(eV) L1  PT       DPT      G2(eV)    DG2(eV)   L2  PT       DPT      G3(eV)    DG3(eV)   L3  PT       DPT      Exf(keV) Int  Frac
+108.0    0.2       1.0  1.2e-10   0       0   0.001   -5.0      4.4e-2    1.1e-2    1   0        0        0         0         0   0        0        0        1  
+121.7    4.0       5.0  3.0e-16   0       4   0.001   -5.0      1.0       0.001     1   0        0        0         0         0   0        0        0        0  
+194.7    5.0       3.0  1.5e-8    0       2   0.001   -5.0      1.0       0.001     1   0        0        0         0         0   0        0        0        0
+********************************************************************************************************************************************************************
+Interference between Resonances [numerical integration only]
+Note: + for positive, - for negative interference; +- if interference sign is unknown
+Ecm(keV) DEcm(keV) Jr   G1(eV)    DG1(eV)   L1   PT   DPT    G2(eV)     DG2(eV)    L2  PT	DPT    G3(eV)    DG3(eV)   L3  PT   DPT    Exf  
+!+- 
+0.0      0.0       0.0  0.0       0.0       0    0.0  0.0    0.0        0.0        0   0    0.0    0.0       0.0       0   0    0.0    0.0  
+0.0      0.0       0.0  0.0       0.0       0    0.0  0.0    0.0        0.0        0   0    0.0    0.0       0.0       0   0    0.0    0.0  
+********************************************************************************************************************************************************************
+Input file and PDF at NT selected temperatures only
+Note: default values are used for Input file range if Min=Max=0.0
+T9      Min     Max
+0.01    0.0     0.0
+0.1     0.0     0.0
+********************************************************************************************************************************************************************
+Comments: [Evaluator: Christian Iliadis; Date: 03/16/2023]
+1. Strengths of resonances above Er=500 keV are adopted from Endt 1998, but renormalized to standard value for Er=403 keV listed in Sargood 1982. When no strength 
+   uncertainties are reported in Endt 1998, we assumed 25%.
+2. Er=214.7 keV: proton width from reported spectroscopic factor in Dykoski et al. combined with upper limit derived in the present work; value of Gg=1.0 eV is a 
+   guess (inconsequential).
+3. Er=121.7 keV: proton width for assumption 5+ (ell=4) estimated from Fig. 2 of Dykoski et al. Since 7+ (ell=6) gives an even smaller value, we treat the listed 
+   proton partial width as an upper limit; value of Gg=1.0 eV is a guess (inconsequential).
+4. Er=108.0 keV: proton width upper limit for ell=0 estimated from Fig. 2 of Dykoski et al. Gamma-ray partial width from measured mean lifetime in Tikkanen et al.
+5. Mean reduced width values estimated from Fig. 4 of Pogrebnyak et al. (2013); we assume a median [recommended] value of 1.0e-3; the value "-5.0" indicates a 
+   factor uncertainty of 5, assuming a lognormal probability density.
+6. Resonance energies: calculated from the listed excitation energies using the Q value derived from nuclear masses.
+7. Direct capture calculated using experimental C2S values from Dykoski & Dehnhard (1976), Endt (1977), and Vernotte et al. (1994).
+8. Resonance strengths of Er=303 and 314 keV from direct measurement of Downen et al. (2022).
+9. Contribution from -87 keV subthreshold resonance is negligible compared to DC.
+

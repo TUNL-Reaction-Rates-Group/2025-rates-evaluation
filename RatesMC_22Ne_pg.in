@@ -1,0 +1,130 @@
+22Ne(p,g)23Na
+********************************************************************************************************************************************************************
+1H              ! Zproj                           (or nuclide's name to use AME2020)
+22Ne            ! Ztarget
+0               ! Zexitparticle                   (=0 when only 2 channels open)
+1H              ! Aproj                           (input either NUCLEAR MASS in amu, or the nuclide's name, e.g. 23Na)
+22Ne            ! Atarget   
+0               ! Aexitparticle                   (=0 when only 2 channels open)
+1H              ! Jproj                           (or nuclide's name to use NuBase 2020)
+22Ne            ! Jtarget
+0               ! Jexitparticle                   (=0 when only 2 channels open)
+AME             ! projectile separation energy    (NUCLEAR Q value; enter AME if nuclide names are used)
+AME             ! exit particle separation energy (=0 when only 2 channels open; enter AME if nuclide names are used)
+1.25            ! Radius parameter R0 (fm)
+2               ! Gamma-ray channel number        (=2 if ejectile is a g-ray; =3 otherwise)
+********************************************************************************************************************************************************************
+1.0             ! Minimum energy for numerical integration (keV)
+50000           ! Number of random samples (>5000 for better statistics)
+0               ! =0 for rate output at all temperatures; =NT for rate output at selected temperatures
+0 0             ! (wg, E): =0 for no correlation; =1 for correlation
+********************************************************************************************************************************************************************
+Non-resonant table  
+Enter comma-separated energies (keV) on 1st line, S-factors (keV.b) on 2nd line, and fractional uncertainties on 3rd line
+0       3       5       105      205       305      505      1005     1505     2005     2505     3005    3505    4905
+44.2    44.1    43.2    40.3     39.2      38.6     38.3     38.7     39.7     40.6     41.5     42.4    43.1    44.7
+-1.5    -1.5    -1.5    -1.5     -1.5      -1.5     -1.5     -1.5     -1.5     -1.5     -1.5     -1.5    -1.5    -1.5    
+0  0
+0  0
+0  0
+********************************************************************************************************************************************************************
+Resonant Contribution
+Note: G1 = entrance channel, G2 = exit channel, G3 = spectator channel !! Ecm, Exf in (keV); wg, Gx in (eV) !!
+Note: if Er<0, theta^2=C2S*theta_sp^2 must be entered instead of entrance channel partial width; negative values of Dwg, DGx indicate factor uncertainties
+Ecm(keV) DEcm(keV) wg(eV)     Dwg(eV)    J    G1(eV)    DG1(eV)   L1  G2(eV)    DG2(eV)   L2  G3(eV)    DG3(eV)   L3  Exf(keV) Int  Corr/Frac
+-128.2   1.8       0          0          0.5  0.18      -1.4      0   3.6       -1.2      1   0         0         0   0        1
+  34.7   1.1       0          0          0.5  1.9e-15   -2        0   2.2       -1.4      1   0         0         0   0        1
+ 151.9   0.8       2.1e-7     0.2e-7     0    0         0         0   0         0         0   0         0         0   0        0   
+ 182.1   0.7       2.5e-6     0.2e-6     0    0         0         0   0         0         0   0         0         0   0        0   
+ 249.4   0.8       9.4e-6     0.8e-6     0    0         0         0   0         0         0   0         0         0   0        0   
+ 417.8   0.8       0.081      0.011      0    0         0         0   0         0         0   0         0         0   0        0   
+ 458.9   0.1       0.51       0.05       0    0         0         0   0         0         0   0         0         0   0        0   
+ 603.2   0.3       0.03       0.01       0    0         0         0   0         0         0   0         0         0   0        0   
+ 611.6   0.5       2.7        0.3        0    0         0         0   0         0         0   0         0         0   0        0   
+ 632.9   0.5       0.45       0.06       0    0         0         0   0         0         0   0         0         0   0        0   
+ 694.5   0.8       0.13       0.04       0    0         0         0   0         0         0   0         0         0   0        0   
+ 815.0   0.2       7.0        2.5        0    0         0         0   0         0         0   0         0         0   0        0   
+ 858.6   0.5       1.8        0.9        0    0         0         0   0         0         0   0         0         0   0        0   
+ 862.4   1.0       1.05       0.5        0    0         0         0   0         0         0   0         0         0   0        0   
+ 880.8   1.0       0.8        0.25       0    0         0         0   0         0         0   0         0         0   0        0   
+ 889.5   0.3       0.35       0.1        0    0         0         0   0         0         0   0         0         0   0        0   
+ 907.6   1.0       6.0        2.0        0    0         0         0   0         0         0   0         0         0   0        0   
+ 939.2   0.1       0.4        0.1        0    0         0         0   0         0         0   0         0         0   0        0   
+ 962.2   0.5       2.4        0.7        0    0         0         0   0         0         0   0         0         0   0        0   
+1022.3   0.4       0.9        0.2        0    0         0         0   0         0         0   0         0         0   0        0   
+1042.0   1.0       2.15       0.55       0    0         0         0   0         0         0   0         0         0   0        0   
+1056.5   0.5       2.15       0.55       0    0         0         0   0         0         0   0         0         0   0        0   
+1097.4   0.6       1.5        0.4        0    0         0         0   0         0         0   0         0         0   0        0   
+1123.5   0.6       0.6        0.15       0    0         0         0   0         0         0   0         0         0   0        0   
+1209.8   0.6       1.1        0.3        0    0         0         0   0         0         0   0         0         0   0        0   
+1224.2   1.0       11.1       1.0        0    0         0         0   0         0         0   0         0         0   0        0    
+1255.6   0.6       0.2        0.05       0    0         0         0   0         0         0   0         0         0   0        0      
+1277.2   0.6       2.75       0.7        0    0         0         0   0         0         0   0         0         0   0        0   
+1282.4   0.5       1.20       0.3        0    0         0         0   0         0         0   0         0         0   0        0   
+1291.6   0.2       0.8        0.2        0    0         0         0   0         0         0   0         0         0   0        0   
+1321.2   0.5       0.65       0.15       0    0         0         0   0         0         0   0         0         0   0        0   
+1332.3   0.5       1.4        0.35       0    0         0         0   0         0         0   0         0         0   0        0   
+1376.0   0.2       2.7        0.7        0    0         0         0   0         0         0   0         0         0   0        0   
+1438.0   0.3       4.5        1.0        0    0         0         0   0         0         0   0         0         0   0        0   
+1450.1   1.4       1.1        0.3        0    0         0         0   0         0         0   0         0         0   0        0   
+1487.9   0.6       1.4        0.35       0    0         0         0   0         0         0   0         0         0   0        0   
+1524.4   0.6       5.0        1.5        0    0         0         0   0         0         0   0         0         0   0        0   
+1545.0   0.7       1.05       0.25       0    0         0         0   0         0         0   0         0         0   0        0   
+1552.4   0.7       4.5        1.0        0    0         0         0   0         0         0   0         0         0   0        0   
+1560.2   0.7       3.0        0.75       0    0         0         0   0         0         0   0         0         0   0        0   
+1646.9   1.0       6.5        1.5        0    0         0         0   0         0         0   0         0         0   0        0   
+1655.0   1.2       1.75       0.45       0    0         0         0   0         0         0   0         0         0   0        0   
+1685.1   0.7       2.55       0.65       0    0         0         0   0         0         0   0         0         0   0        0   
+1708.1   0.7       3.3        0.85       0    0         0         0   0         0         0   0         0         0   0        0   
+1714.1   0.7       0.5        0.15       0    0         0         0   0         0         0   0         0         0   0        0   
+1725.4   0.7       2.2        0.55       0    0         0         0   0         0         0   0         0         0   0        0   
+1740.4   0.7       0.75       0.2        0    0         0         0   0         0         0   0         0         0   0        0   
+1755.5   0.9       5.5        1.5        0    0         0         0   0         0         0   0         0         0   0        0   
+1780.8   0.8       1.15       0.3        0    0         0         0   0         0         0   0         0         0   0        0   
+1823.1   0.8       3.75       0.95       0    0         0         0   0         0         0   0         0         0   0        0   
+********************************************************************************************************************************************************************
+Upper Limits of Resonances
+Note: enter partial width upper limit by chosing non-zero value for PT, where PT=<theta^2> for particles and PT=<B> for g-rays [enter: "upper_limit  0"]; 
+Note: for each resonance: # upper limits < # open channels! negative values of Dwg, DGx, DPT indicate factor uncertainties 
+Ecm(keV) DEcm(keV) J    G1(eV)    DG1(eV) L1  PT       DPT      G2(eV)    DG2(eV)   L2  PT       DPT      G3(eV)    DG3(eV)   L3  PT       DPT      Exf(keV) Int  Frac
+  5.5    0.8       0.5  2.1e-51   0       0   0.001    -5.0     1.0       0.001     1   0        0        0         0         0   0        0        0.0      0
+ 27.6    0.7       4.5  5.4e-26   0       5   0.001    -5.0     1.0       0.001     1   0        0        0         0         0   0        0        0.0      0 
+! 68.8   10.0      0.5  6.0e-11   0       0   0.001    -5.0     1.0       0.001     1   0        0        0         0         0   0        0        0.0      0
+! 100.8   10.0      0.5  7.0e-11   0       0   0.001    -5.0     1.0       0.001     1   0        0        0         0         0   0        0        0.0      0
+153.6    0.6       3.5  2.4e-8    0       3   0.001    -5.0     1.0       0.001     1   0        0        0         0         0   0        0        0.0      0
+! 206.8   10.0      0.5  3.0e-8    0       0   0.001    -5.0     1.0       0.001     1   0        0        0         0         0   0        0        0.0      0 
+278.8    3.0       0.5  2.2e-6    0       0   0.001    -5.0     1.0       0.001     1   0        0        0         0         0   0        0        0.0      0 
+308.3    0.7       0.5  2.2e-6    0       0   0.001    -5.0     1.0       0.001     1   0        0        0         0         0   0        0        0.0      0 
+319.8    3.0       0.5  3.0e-6    0       0   0.001    -5.0     1.0       0.001     1   0        0        0         0         0   0        0        0.0      0 
+********************************************************************************************************************************************************************
+Interference between Resonances [numerical integration only]
+Note: + for positive, - for negative interference; +- if interference sign is unknown
+Ecm(keV) DEcm(keV) Jr   G1(eV)    DG1(eV)   L1   PT   DPT    G2(eV)     DG2(eV)    L2  PT	DPT    G3(eV)    DG3(eV)   L3  PT   DPT    Exf(keV)  
+!+- 
+0.0      0.0       0.0  0.0       0.0       0    0.0  0.0    0.0        0.0        0   0    0.0    0.0       0.0       0   0    0.0    0.0  
+0.0      0.0       0.0  0.0       0.0       0    0.0  0.0    0.0        0.0        0   0    0.0    0.0       0.0       0   0    0.0    0.0  
+********************************************************************************************************************************************************************
+Input file and PDF at NT selected temperatures only
+Note: default values are used for Input file range if Min=Max=0.0
+T9      Min     Max
+0.01    0.0     0.0
+0.1     0.0     0.0
+********************************************************************************************************************************************************************
+Comments: [Evaluator: Christian Iliadis; Date: 05/04/2023]
+1.  Er > 600 keV: from Endt 1990, unless noted otherwise. These values had been mostly normalized to Er = 1224 keV strength from Keinonen et al. 1977.
+2.  Er = 152, 182, 249, 418, 459, 612, 633, and 1224 keV: weighted average from Kelly et al. 2015 and 2017; Ferraro et al. 2018; Williams et al. 2020,
+    Keinonen et al. 1977.
+3.  Er = 6 and 28 keV: upper limits from Hale et al. 2001.
+4.  Er = 35 keV: Gp from Hale et al. 2001, but corrected for difference in energy [factor 2 uncertainty assumed]; Gg from lifetime listed in ENSDF.
+5.  Er = 69, 101, 207 keV: these states have only been observed tentatively by Powers et al. 1971 and we disregard them.
+6.  Er = 154 keV: upper limit from Kelly et al. 2017.
+7.  Er = 279, 308, and 320 keV: upper limits from Goerres et al. 1982.
+8.  Direct capture S factor calculated using potential model and experimental C2S values of Powers et al. 1971, Endt 1977, and Hale et al. 2001. Estimated
+    uncertainty is factor 1.5.
+9.  Er = -128 keV: Gg from lifetime listed in ENSDF; C2S=0.30 from Hale, theta_2p^2=0.6.
+
+
+
+
+
+

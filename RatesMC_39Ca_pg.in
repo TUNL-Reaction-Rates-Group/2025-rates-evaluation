@@ -1,0 +1,72 @@
+39Ca(p,g)40Sc
+********************************************************************************************************************************************************************
+1H              ! Zproj                           (or nuclide's name to use AME2020)
+39Ca            ! Ztarget
+0               ! Zexitparticle                   (=0 when only 2 channels open)
+1H              ! Aproj                           (input either NUCLEAR MASS in amu, or the nuclide's name, e.g. 23Na)
+39Ca            ! Atarget   
+0               ! Aexitparticle                   (=0 when only 2 channels open)
+1H              ! Jproj                           (or nuclide's name to use NuBase 2020)
+39Ca            ! Jtarget
+0               ! Jexitparticle                   (=0 when only 2 channels open)
+AME             ! projectile separation energy    (NUCLEAR Q value; enter AME if nuclide names are used)
+AME             ! exit particle separation energy (=0 when only 2 channels open; enter AME if nuclide names are used)
+1.25            ! Radius parameter R0 (fm)
+2               ! Gamma-ray channel number        (=2 if ejectile is a g-ray; =3 otherwise)
+********************************************************************************************************************************************************************
+1.0             ! Minimum energy for numerical integration (keV)
+50000           ! Number of random samples (>5000 for better statistics)
+0               ! =0 for rate output at all temperatures; =NT for rate output at selected temperatures
+0 0             ! (wg, E): =0 for no correlation; =1 for correlation
+********************************************************************************************************************************************************************
+Non-resonant table   
+Enter comma-separated energies (keV) on 1st line, S-factors (keV.b) on 2nd line, and fractional uncertainties on 3rd line
+0       11      111     211     311     411     511     711     1011    1511    2011    2511   3011   3511   4011   4511
+29.1    29.1    27.9    27.2    26.7    26.4    26.3    26.3    26.8    28.3    30.4    32.9   35.7   38.6   41.7   44.9 
+-3      -3      -3      -3      -3      -3      -3      -3      -3      -3      -3      -3     -3     -3      -3    -3 
+0  0
+0  0
+0  0
+********************************************************************************************************************************************************************
+Resonant Contribution
+Note: G1 = entrance channel, G2 = exit channel, G3 = spectator channel !! Ecm, Exf in (keV); wg, Gx in (eV) !!
+Note: if Er<0, theta^2=C2S*theta_sp^2 must be entered instead of entrance channel partial width; negative values of Dwg, DGx indicate factor uncertainties
+Ecm(keV)  DEcm(keV)  wg(eV)   Dwg(eV)   J    G1(eV)    DG1(eV)  L1   G2(eV)    DG2(eV)  L2   G3(eV)   DG3(eV)  L3   Exf(keV)  Int  Corr/Frac
+ 244.8    3.2        0        0         2    7.8e-9    -3.0     1    1.8e-3    -2.0     1    0        0        0     30.0     1
+ 366.2    3.4        0        0         5    7.3e-7    -1.6     3    5.5e-4    -2.0     1    0        0        0      0.0     1
+ 924.7   50.0        0        0         3    26.4      -1.6     1    1.1e-3    -2.0     1    0        0        0     30.0     1
+1143.4    3.4        0        0         1    387       -1.6     1    1.0e-3    -2.0     2    0        0        0     30.0     1
+1175.9    3.6        0        0         2    352       -1.6     1    1.4e-3    -2.0     2    0        0        0      0.0     1
+1269.7    3.7        0        0         3    0.15      -10      3    3.0e-3    -2.0     1    0        0        0      0.0     1
+1343.7    4.1        0        0         0    15.2      -2       2    1.3e-9    -2.0     3    0        0        0     30.0     1
+1405.7    4.1        0        0         3    8.0       -2       2    7.0e-3    -2.0     1    0        0        0     30.0     1
+********************************************************************************************************************************************************************
+Upper Limits of Resonances
+Note: enter partial width upper limit by chosing non-zero value for PT, where PT=<theta^2> for particles and PT=<B> for g-rays [enter: "upper_limit  0"]; 
+Note: for each resonance: # upper limits < # open channels! negative values of Dwg, DGx, DPT indicate factor uncertainties 
+Ecm(keV) DEcm(keV) J   G1(eV)    DG1(eV) L1  PT       DPT      G2(eV)    DG2(eV)   L2  PT       DPT      G3(eV)    DG3(eV)   L3  PT       DPT      Exf(keV) Int  Frac
+! 0.00     0.00      0   0.00E+00  0       0   0.0E+00  0.0E+00  0.0E+00   0.0E+00   0   0        0        0         0         0   0        0        0        0    
+********************************************************************************************************************************************************************
+Interference between Resonances [numerical integration only]
+Note: + for positive, - for negative interference; +- if interference sign is unknown
+Ecm(keV) DEcm(keV) Jr   G1(eV)    DG1(eV)   L1   PT   DPT    G2(eV)     DG2(eV)    L2  PT	DPT    G3(eV)    DG3(eV)   L3  PT   DPT    Exf(keV)  
+!+- 
+0.0      0.0       0.0  0.0       0.0       0    0.0  0.0    0.0        0.0        0   0    0.0    0.0       0.0       0   0    0.0    0.0  
+0.0      0.0       0.0  0.0       0.0       0    0.0  0.0    0.0        0.0        0   0    0.0    0.0       0.0       0   0    0.0    0.0  
+********************************************************************************************************************************************************************
+Input file and PDF at NT selected temperatures only
+Note: default values are used for Input file range if Min=Max=0.0
+T9      Min     Max
+0.01    0.0     0.0
+0.1     0.0     0.0
+********************************************************************************************************************************************************************
+Comments: [Evaluator: Christian Iliadis; Date: 11/01/2023]
+1. Reaction Q value has changed by about 10 keV compared to 2010 evaluation.
+2. 40Sc - 40K mirror state assignments from Hansper et al. 2000; assignments of resonances above 1 MeV energy are ambiguous.
+3. Proton widths estimated using C2S values adopted from Endt 1977 or Fink and Schiffer 1974.  
+4. Gamma-ray widths are estimated from the lifetimes of the bound mirror states (ENSDF), with an assumed uncertainty of a factor of 2.
+5. Er = 925 keV: IMME predicts the (3-)_2 state near 1.45 MeV excitation; this level has not been observed yet in 40Sc; assumed 50 keV uncertainty in its energy.
+6. Er = 245 keV: the 39K(d,p) angular distribution reveals a very small ell=1 component compared to a dominant ell=3 one; therefore, the uncertainty on the partial
+   witdh is set to a factor of 3.
+7. Direct capture S factor estimated from C2S values in Endt 1977; assumed uncertainty is a factor of 3 because the ell = 1 component of the transition to the
+   first excited state is much smaller than the ell = 3 component.

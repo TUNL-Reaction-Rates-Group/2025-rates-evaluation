@@ -1,0 +1,78 @@
+16O(a,g)20Ne
+****************************************************************************************************************
+2	! Zproj
+8 	! Ztarget
+0 	! Zexitparticle (=0 when only 2 channels open)
+4.0026 	! Aproj
+15.9949 ! Atarget
+0	! Aexitparticle (=0 when only 2 channels open)
+0.0 	! Jproj
+0.0 	! Jtarget
+0 	! Jexitparticle (=0 when only 2 channels open)
+4729.85 ! projectile separation energy (keV)
+0 	! exit particle separation energy (=0 when only 2 channels open)
+1.25 	! Radius parameter R0 (fm)
+2 	! Gamma-ray channel number (=2 if ejectile is a g-ray; =3 otherwise)
+****************************************************************************************************************
+2.0	! Minimum energy for numerical integration (keV)
+50000 	! Number of random samples (>5000 for better statistics)
+0 	! =0 for rate output at all temperatures; =NT for rate output at selected temperatures
+0 0     ! (wg, E): =0 for no correlation; =1 for correlation
+****************************************************************************************************************
+Non-resonant table  
+Enter comma-separated energies (keV) on 1st line, S-factors (keV.b) on 2nd line, and fractional uncertainties on 3rd line
+     2.0    102.0    202.0    302.0    402.0    502.0    602.0    702.0    802.0    902.0   1002.0    1003.0
+2652.041 2606.970 2563.038 2520.060 2477.867 2436.312 2395.262 2354.605 2314.247 2274.109 2234.133       0.0
+  -2.266   -2.247   -2.231   -2.220   -2.209   -2.197   -2.184   -2.170   -2.155   -2.140   -2.122	 0.0
+0  0
+0  0
+0  0
+****************************************************************************************************************
+Resonant Contribution
+Note: G1 = entrance channel, G2 = exit channel, G3 = spectator channel !! Ecm, Exf in (keV); wg, Gx in (eV) !!
+Note: if Er<0, theta^2=C2S*theta_sp^2 must be entered instead of entrance channel partial width
+Ecm(keV) DEcm(keV) wg(eV)     Dwg(eV)    J   G1(eV)    DG1(eV)   L1  G2(eV)    DG2(eV)   L2  G3(eV)    DG3(eV)   L3  Exf(keV) Int  Corr/Frac
+891.6    1.7       0          0          3   2.4e-3    -1.35     3   2.7e-4    -1.126    1   0         0         0   1633.7   1
+1057.9	 2.6 	   0 	      0 	 1   28.0      -1.114 	 1   5.43e-3   -1.103 	 1   0 	       0 	 0   1633.7   1
+1995.2 	 5.0 	   0 	      0 	 0   1.9e4     -1.049 	 0   7.61e-2   -1.080 	 2   0 	       0 	 0   1633.7   1
+2426.5 	 0.5 	   0 	      0 	 3   8.2e3     -1.037 	 3   1.06e-3   -1.068 	 1   0         0 	 0   4247.7   1
+2461.2	 3.0 	   0 	      0 	 0   3.4e3     -1.061 	 0   5.2e-3    -1.101 	 2   0 	       0 	 0   1633.7   1
+2692.1 	 1.2 	   0 	      0 	 2   15.1e3    -1.047 	 2   3.25e-2   -1.073 	 1   0 	       0 	 0   1633.7   1
+3103.6 	 1.5 	   0 	      0 	 2   2.0e3     -1.291 	 2   6.86e-2   -1.108 	 2   0 	       0 	 0   0.0      1
+3723.3	 4.0	   10.0e-3    -1.264	 5   0         0      	 0   0	       0	 0   0	       0	 0   5621     0
+3978.2 	 7.0 	   0.21       -1.275 	 0   0 	       0 	 0   0 	       0 	 0   0 	       0 	 0   0.0      0
+4047.8 	 2.2 	   1.35       -1.118 	 0   0 	       0 	 0   0 	       0 	 0   0	       0 	 0   0.0      0
+4301.2 	 7.0 	   3.05       -1.133 	 0   0 	       0 	 0   0 	       0 	 0   0 	       0 	 0   0.0      0
+4386.2 	 3.0 	   0.152      -1.119 	 0   0 	       0 	 0   0 	       0 	 0   0 	       0 	 0   0.0      0
+4753.2 	 3.0 	   1.3 	      -1.500 	 0   0 	       0 	 0   0 	       0 	 0   0 	       0 	 0   0.0      0
+5260.2	 8.0 	   8.0 	      -1.483 	 0   0 	       0 	 0   0 	       0 	 0   0 	       0 	 0   0.0      0
+5543.4	 1.9	   19.1	      -1.080	 0   0 	       0 	 0   0 	       0 	 0   0 	       0 	 0   0.0      0
+6360.2 	 3.0 	   30.2       -1.123 	 0   0 	       0 	 0   0 	       0 	 0   0 	       0 	 0   0.0      0
+6540.2 	 5.0 	   1.50       -1.128 	 0   0 	       0 	 0   0 	       0 	 0   0 	       0 	 0   0.0      0
+6828.2 	 4.0 	   0.41       -1.130 	 0   0 	       0 	 0   0 	       0 	 0   0 	       0 	 0   0.0      0
+7198.2 	 4.0 	   0.23       -1.247 	 0   0 	       0 	 0   0 	       0 	 0   0 	       0 	 0   0.0      0
+7491.2	 4.0 	   1.41       -1.179 	 0   0 	       0 	 0   0 	       0 	 0   0 	       0 	 0   0.0      0
+7526.2 	 3.0 	   4.33       -1.131 	 0   0 	       0 	 0   0 	       0 	 0   0 	       0 	 0   0.0      0
+7671.2 	 5.0 	   1.94       -1.081 	 0   0 	       0 	 0   0 	       0 	 0   0 	       0 	 0   0.0      0
+****************************************************************************************************************
+Upper Limits of Resonances
+Note: enter partial width upper limit by chosing non-zero value for PT, where PT=<theta^2> for particles and PT=<B> for g-rays [enter: "upper_limit  0"]; 
+Note: for each resonance: # upper limits < # open channels! negative values of Dwg, DGx, DPT indicate factor uncertainties 
+Ecm(keV) DEcm(keV) J   G1(eV)    DG1(eV) L1  PT       DPT      G2(eV)    DG2(eV)   L2  PT       DPT      G3(eV)    DG3(eV)   L3  PT       DPT      Exf(keV) Int  Frac
+!0.0 0.0 0.0 0.0 0.0 0 0 0.0 0.0 0 0 0.0 0.0 0 0 0.0 0
+****************************************************************************************************************
+Interference between Resonances [numerical integration only]
+Note: + for positive, - for negative interference; +- if interference sign is unknown
+Ecm(keV) DEcm(keV) Jr   G1(eV)    DG1(eV)   L1   PT   DPT    G2(eV)     DG2(eV)    L2  PT       DPT    G3(eV)    DG3(eV)   L3  PT   DPT    Exf  
+!+- 
+0.0      0.0       0.0  0.0       0.0       0    0.0  0.0    0.0        0.0        0   0    0.0    0.0       0.0       0   0    0.0    0.0  
+0.0      0.0       0.0  0.0       0.0       0    0.0  0.0    0.0        0.0        0   0    0.0    0.0       0.0       0   0    0.0    0.0  
+****************************************************************************************************************
+Input file and PDF at NT selected temperatures only
+Note: default values are used for Input file range if Min=Max=0.0
+T9      Min     Max
+0.01    0.0     0.0
+0.1     0.0     0.0
+********************************************************************************************************************************************************************
+Comments:
+taken from Iliadis-2010, updated with later (a,g), DC recalculated

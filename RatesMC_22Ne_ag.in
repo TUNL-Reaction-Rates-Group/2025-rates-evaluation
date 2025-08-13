@@ -101,4 +101,12 @@ T9      Min     Max
 0.1     0.0     0.0
 ********************************************************************************************************************************************************************
 Comments:
-evaluator: Richard Longland
+Evaluator: R. Longland (04/2025)
+1. Observed resonances: Wolke et al. (1989); Hunt et al. (2019); Shahina et al. (2022).
+2. Unobserved resonances: Giesen et al. (1993); Ugalde et al. (2007); Talwar et al. (2016); Jayatissa et al. (2020). Relative spectroscopic
+   factors were normalized to the 703-keV resonance.
+3. Previous rates: Longland et al. (2012); Adsley et al. (2021a); Wiescher et al. (2023).
+4. Energies, Jpi values, neutron, and g-ray partial widths were adopted from Lees et al. (1974); Moss (1976); Weigmann et al.
+   (1976); Berg et al. (1984); Kraushaar et al. (1986); Glatz et al. (1986); Crawley et al. (1989); Yasue et al. (1990);
+   Walkiewicz et al. (1992); Koehler (2002); Longland et al. (2009); deBoer et al. (2010); Massimi et al. (2012);
+   Adsley et al. (2018); Lotay et al. (2019); Adsley et al. (2021b); Chen et al. (2021).

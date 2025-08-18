@@ -111,7 +111,7 @@ Ecm(keV)  DEcm(keV)  J    G1(eV)    DG1(eV)  L1   PT       DPT      G2(eV)    DG
 Interference between Resonances [numerical integration only]
 Note: + for positive, - for negative interference; +- if interference sign is unknown
 Ecm(keV) DEcm(keV) Jr   G1(eV)   DG1(eV)   L1   PT     DPT    G2(eV)   DG2(eV)  L2  PT	 DPT    G3(eV)   DG3(eV)  L3   PT   DPT    Exf  
-+ 
+- 
  144.8   1.2       0.5  0.167    0.012     0    0.0    0.0    130      10       1   0.0  0.0    0.76     0.08     1    0.0  0.0    0.0
  628.0   10.0      0.5  7.1e3    1.8e3     0    0.0    0.0    182e3    45e3     1   0.0  0.0    1.0      0.001    1    0.0  0.0    0.0 
 ********************************************************************************************************************************************************************

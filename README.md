@@ -2,7 +2,7 @@
 
 # The 2025 Evaluation of Experimental Thermonuclear Reaction Rates
 
-This repository contains the RatesMC input files corresponding to the 2025 evaluation of experimental thermonuclear reaction rates.
+This repository contains the RatesMC input files corresponding to the 2025 evaluation of experimental thermonuclear reaction rates. In addition, the Hauser-Feshbach, TALYS rates for estimating reaction rates at elevated temperatures are also included. Those rates are produced by Stephane Goriely.
 
 The evaluation is carried out by a few members of the TUNL nuclear astrophysics group and is published [here](link).
 

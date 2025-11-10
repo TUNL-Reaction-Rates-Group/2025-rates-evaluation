@@ -1,0 +1,89 @@
+18O(p,g)19F
+********************************************************************************************************************************************************************
+1H              ! Zproj                           (or nuclide's name to use AME2020)
+18O             ! Ztarget
+4He             ! Zexitparticle                   (=0 when only 2 channels open)
+1H              ! Aproj                           (input either NUCLEAR MASS in amu, or the nuclide's name, e.g. 23Na)
+18O             ! Atarget   
+4He             ! Aexitparticle                   (=0 when only 2 channels open)
+1H              ! Jproj                           (or nuclide's name to use NuBase 2020)
+18O             ! Jtarget
+4He             ! Jexitparticle                   (=0 when only 2 channels open)
+AME             ! projectile separation energy    (NUCLEAR Q value; enter AME if nuclide names are used)
+AME             ! exit particle separation energy (=0 when only 2 channels open; enter AME if nuclide names are used)
+1.25            ! Radius parameter R0 (fm)
+2               ! Gamma-ray channel number        (=2 if ejectile is a g-ray; =3 otherwise)
+********************************************************************************************************************************************************************
+1.0             ! Minimum energy for numerical integration (keV)
+50000           ! Number of random samples (>5000 for better statistics)
+0               ! =0 for rate output at all temperatures; =NT for rate output at selected temperatures
+0  0            ! (wg, E): =0 for no correlation; =1 for correlation
+********************************************************************************************************************************************************************
+Non-resonant table  
+Enter comma-separated energies (keV) on 1st line, S-factors (keV.b) on 2nd line, and fractional uncertainties on 3rd line
+0      2      102    202    302    402    602    802    1102   1802   2402   2702   3102   3502   4202   4902
+10.0   10.0   10.2   10.4   10.6   10.8   11.1   11.6   12.1   13.2   14.1   14.5   15.0   15.5   16.2   16.9
+-1.4   -1.4   -1.4   -1.4   -1.4   -1.4   -1.4   -1.4   -1.4   -1.4   -1.4   -1.4   -1.4   -1.4   -1.4   -1.4
+0  0
+0  0
+0  0
+********************************************************************************************************************************************************************
+Resonant Contribution
+Note: G1 = entrance channel, G2 = exit channel, G3 = spectator channel !! Ecm, Exf in (keV); wg, Gx in (eV) !!
+Note: if Er<0, theta^2=C2S*theta_sp^2 must be entered instead of entrance channel partial width; negative values of Dwg, DGx indicate factor uncertainties
+Ecm(keV)  DEcm(keV)  wg(eV)    Dwg(eV)    J     G1(eV)   DG1(eV)  L1    G2(eV)  DG2(eV)  L2   G3(eV)   DG3(eV)  L3    Exf(keV)  Int  Corr/Frac
+  21.1    1.0        0         0          2.5   2.4e-19  1.2e-19  2     2.3     1.0      1    2.5e3    1.0e3    3     0.0       1
+  91.1    3.0        0         0          1.5   8.5e-8   1.7e-8   2     0.6     0.3      1    8e3      4e3      1     0.0       1
+ 144.8    1.2        0         0          0.5   0.167    0.012    0     0.76    0.08     1    130      10       1     0.0       1
+ 206.1    1.0        6.7e-6    1.8e-6     0     0        0        0     0       0        0    0        0        0     0.0       0
+ 261.4    2.6        3.2e-5    3.0e-6     0     0        0        0     0       0        0    0        0        0     0.0       0
+ 317.1    1.3        0         0          2.5   1.9e-2   0.3e-2   2     0.78    0.34     1    47.0     19.0     3     0.0       1
+ 590.6    1.7        1.0e-2    0.2e-2     0     0        0        0     0       0        0    0        0        0     0.0       0 
+ 599.0    1.2        0         0          1.5   1.4e2    0.7e2    1     0.71    0.39     1    2.0e3    0.1e3    2     0.0       1 
+ 800.3    1.6        0         0          0.5   24.6e3   1.4e3    0     2.5     0.4      1    20.e3    1.0e3    1     0.0       1 
+ 933.8    2.8        0         0          1.5   76.0     7.0      1     0.34    0.06     1    3.5e3    0.3e3    2     0.0       1 
+1106.8    4.0        0.29      0.03       0     0        0        0     0       0        0    0        0        0     0.0       0 
+1174.1    1.5        0         0          0.5   0.38e3   0.03e3   0     1.4     1.0      1    5.4e3    0.38e3   1     0.0       1   
+1325.1    2.1        0.08      0.01       0     0        0        0     0       0        0    0        0        0     0.0       0 
+1328.1    1.2        0         0          0.5   0.22e3   0.02e3   0     3.4     1.7      1    4.7e3    0.4e3    1     0.0       1 
+1543.5    2.1        0.025     0.005      0     0        0        0     0       0        0    0        0        0     0.0       0 
+1573.1    3.0        0.041     0.010      0     0        0        0     0       0        0    0        0        0     0.0       0 
+1582.1    4.0        0.06      0.01       0     0        0        0     0       0        0    0        0        0     0.0       0 
+1593.1    3.0        0.025     0.004      0     0        0        0     0       0        0    0        0        0     0.0       0 
+1674.6    1.6        0         0          1.5   2.0e3    0.6e3    2     1.0     0.4      1    1.4e3    0.4e3    1     0.0       1 
+1827.1    1.2        2.8       0.7        0     0        0        0     0       0        0    0        0        0     0.0       0 
+1881.1    1.9        0.13      0.04       0     0        0        0     0       0        0    0        0        0     0.0       0 
+1894.1    3.0        0         0          0.5   11.e3    3.0e3    0     0.36    0.20     1    18.0e3   5.4e3    1     0.0       1 
+********************************************************************************************************************************************************************
+Upper Limits of Resonances
+Note: enter partial width upper limit by chosing non-zero value for PT, where PT=<theta^2> for particles and PT=<B> for g-rays [enter: "upper_limit  0"]; 
+Note: for each resonance: # upper limits < # open channels! negative values of Dwg, DGx, DPT indicate factor uncertainties 
+Ecm(keV) DEcm(keV) J   G1(eV)    DG1(eV) L1  PT       DPT      G2(eV)    DG2(eV)   L2  PT       DPT      G3(eV)    DG3(eV)   L3  PT       DPT      Exf(keV) Int  Frac
+! 0.00     0.00      0   0.00E+00  0       0   0.0E+00  0.0E+00  0.0E+00   0.0E+00   0   0        0        0         0         0   0        0        0        0    
+********************************************************************************************************************************************************************
+Interference between Resonances [numerical integration only]
+Note: + for positive, - for negative interference; +- if interference sign is unknown
+Ecm(keV) DEcm(keV) Jr   G1(eV)    DG1(eV)   L1   PT   DPT    G2(eV)     DG2(eV)    L2  PT	DPT    G3(eV)    DG3(eV)   L3  PT   DPT    Exf(keV)  
+!+- 
+0.0      0.0       0.0  0.0       0.0       0    0.0  0.0    0.0        0.0        0   0    0.0    0.0       0.0       0   0    0.0    0.0  
+0.0      0.0       0.0  0.0       0.0       0    0.0  0.0    0.0        0.0        0   0    0.0    0.0       0.0       0   0    0.0    0.0  
+********************************************************************************************************************************************************************
+Input file and PDF at NT selected temperatures only
+Note: default values are used for Input file range if Min=Max=0.0
+T9      Min     Max
+0.01    0.0     0.0
+0.1     0.0     0.0
+********************************************************************************************************************************************************************
+Comments: [Evaluator: Christian Iliadis; Date: 04/10/2023]
+1.  DC has been re-calculated from experimental spectroscopic factors presented in Vernotte et al. 1994; Schmidt & Duhm 1970; Green et al. 1970. Zero scattering 
+    potential is assumed. Present DC S factor agrees within 10% with experimental total DC value at 1.8 MeV in Wiescher et al. 1980, but the energy dependence 
+    differs. Present total DC S factor is a factor of 2 smaller than the result reported in Best et al. 2019 that was obtained from fitting the total resonant + 
+    nonresonant yield. It is difficult to see in the latter work how the different fit components give rise to the data. The DC S factor reported in Best et al. 
+    2019 disagrees with the upper limit reported in Buckner et al. 2012. Our computed fractional uncertainty for the total DC S factor is <12%, but we will assume 
+    a 40% uncertainty throughout.
+2.  Er = 206, 261, and 317 keV: wg_pg from weighted average of values listed in Tab. V of Pantaleo et al. 2021.    
+3.  Er = 21 keV: partial widths derived from La Cognata et al. 2008, Champagne & Pitt 1986, and priv. comm. by Allen, quoted in Wiescher et al. 1980.
+4.  Er = 91 keV: partial widths derived from Best 2019; Bayesian average of Lorenz-Wirzba 1979, La Cognata 2008, Bruno 2019; and priv. comm. by Allen, quoted in 
+    Wiescher et al. 1980. 
+5.  Er = 145 keV: partial widths derived from (p,g) strength [many measurements], and (p,a) strength and total width reported in Becker 1995.
+6.  For Er >= 317 keV: same information as in 2010 MC evaluation, but resonance energies were corrected for nuclear Q values.

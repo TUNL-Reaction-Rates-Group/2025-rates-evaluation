@@ -1,0 +1,93 @@
+28Si(a,g)32S
+********************************************************************************************************************************************************************
+4He             ! Zproj                           (or nuclide's name to use AME2020)
+28Si            ! Ztarget
+1H              ! Zexitparticle                   (=0 when only 2 channels open)
+4He             ! Aproj                           (input either NUCLEAR MASS in amu, or the nuclide's name, e.g. 23Na)
+28Si            ! Atarget   
+1H              ! Aexitparticle                   (=0 when only 2 channels open)
+4He             ! Jproj                           (or nuclide's name to use NuBase 2020)
+28Si            ! Jtarget
+1H              ! Jexitparticle                   (=0 when only 2 channels open)
+AME             ! projectile separation energy    (NUCLEAR Q value; enter AME if nuclide names are used)
+AME             ! exit particle separation energy (=0 when only 2 channels open; enter AME if nuclide names are used)
+0.95            ! Radius parameter R0 (fm)
+2               ! Gamma-ray channel number        (=2 if ejectile is a g-ray; =3 otherwise)
+********************************************************************************************************************************************************************
+1.0             ! Minimum energy for numerical integration (keV)
+50000           ! Number of random samples (>5000 for better statistics)
+0               ! =0 for rate output at all temperatures; =NT for rate output at selected temperatures
+0 0             ! (wg, E): =0 for no correlation; =1 for correlation
+********************************************************************************************************************************************************************
+Non-resonant table   
+Enter comma-separated energies (keV) on 1st line, S-factors (keV.b) on 2nd line, and fractional uncertainties on 3rd line
+0       200     300     400     500     600     700     800     900     1000    1200    1500    2000    2500    3000    3500    4000    4500    5000
+2.50e7  2.45e7  2.42e7  2.38e7  2.36e7  2.33e7  2.30e7  2.26e7  2.23e7  2.20e7  2.14e7  2.04e7  1.87e7  1.70e7  1.53e7  1.36e7  1.20e7  1.05e7  9.05e6
+-5.0    -5.0    -5.0    -5.0    -5.0    -5.0    -5.0    -5.0    -5.0    -5.0    -5.0    -5.0    -5.0    -5.0    -5.0    -5.0    -5.0    -5.0    -5.0        
+0  0
+0  0
+0  0
+********************************************************************************************************************************************************************
+Resonant Contribution
+Note: G1 = entrance channel, G2 = exit channel, G3 = spectator channel !! Ecm, Exf in (keV); wg, Gx in (eV) !!
+Note: if Er<0, theta^2=C2S*theta_sp^2 must be entered instead of entrance channel partial width; negative values of Dwg, DGx indicate factor uncertainties
+Ecm(keV) DEcm(keV) wg(eV)     Dwg(eV)   J    G1(eV)    DG1(eV)   L1    G2(eV)    DG2(eV)   L2    G3(eV)    DG3(eV)   L3    Exf(keV) Int  Corr/Frac
+ 489.2   2.0       0          0         1    4.39e-17  -10       1     0.060     0.008     1     0         0         0     0.0      1
+1554.5   0.5       0          0         1    0.0063    0.0010    1     0.36      0.07 eV   1     0         0         0     0.0      1
+1745.2   2.0       0.015      0.0022    0    0         0         0     0         0         0     0         0         0     0        0 
+1916.2   2.0       0          0         2    0.0042    0.002     2     0.0133    0.0067    1     0         0         0     0.0      1
+2078.2   2.0       0          0         3    0.0105    0.003     3     0.021     0.008     1     1.81e-11  -2        3     0.0      1     
+2120.2   2.0       0.078      0.012     0    0         0         0     0         0         0     0         0         0     0        0
+2290.4   2.4       0          0         1    8.3       3.1       1     0.18      0.03      1     0.0037    0.00094   1     0.0      1
+2519.1   1.2       0          0         2    3.06      1.19      2     0.15      0.02      1     0.019     0.0056    2     0.0      1
+2541.9   0.9       0          0         1    6.74      0.94      1     0.37      0.04      1     1.74      0.15      1     0.0      1
+2766.7   0.7       0.63       0.126     0    0         0         0     0         0         0     0         0         0     0        0 
+3278.4   1.0       8.1        1.62      0    0         0         0     0         0         0     0         0         0     0        0 
+3343.4   1.6       2.3        0.46      0    0         0         0     0         0         0     0         0         0     0        0 
+3489.5   1.0       0.5        0.1       0    0         0         0     0         0         0     0         0         0     0        0 
+3583.2   3.0       0.07       0.014     0    0         0         0     0         0         0     0         0         0     0        0 
+3691.6   1.0       0.6        0.12      0    0         0         0     0         0         0     0         0         0     0        0 
+3756.0   1.2       2.7        0.54      0    0         0         0     0         0         0     0         0         0     0        0 
+********************************************************************************************************************************************************************
+Upper Limits of Resonances
+Note: enter partial width upper limit by chosing non-zero value for PT, where PT=<theta^2> for particles and PT=<B> for g-rays [enter: "upper_limit  0"]; 
+Note: for each resonance: # upper limits < # open channels! negative values of Dwg, DGx, DPT indicate factor uncertainties 
+Ecm(keV) DEcm(keV) J   G1(eV)    DG1(eV) L1   PT     DPT       G2(eV)    DG2(eV)   L2   PT    DPT      G3(eV)   DG3(eV)   L3   PT    DPT     Exf(keV)   Int  Frac
+ 170.2   1.2       2   5.86e-40  0       2    0.017  -1.7      0.1       -5        1    0     0        0        0         0    0     0       0.0        0
+ 540.0   1.0       2   4.49e-16  0       2    0.017  -1.7      0.1       -5        1    0     0        0        0         0    0     0       0.0        0
+ 590.9   0.8       0   7.20e-14  0       0    0.017  -1.7      0.1       -5        1    0     0        0        0         0    0     0       0.0        0
+ 757.0   0.5       3   3.63e-12  0       3    0.017  -1.7      0.1       -5        1    0     0        0        0         0    0     0       0.0        0
+ 938.1   0.9       4   1.37e-10  0       4    0.017  -1.7      0.1       -5        1    0     0        0        0         0    0     0       0.0        0
+1030.1   0.7       3   1.72e-8   0       3    0.017  -1.7      0.1       -5        1    0     0        0        0         0    0     0       0.0        0
+1246.3   0.6       4   1.68e-7   0       4    0.017  -1.7      0.1       -5        1    0     0        0        0         0    0     0       0.0        0
+1331.2   4.0       0   3.02e-4   0       0    0.017  -1.7      0.1       -5        1    0     0        0        0         0    0     0       0.0        0
+1351.5   1.0       3   1.07e-5   0       3    0.017  -1.7      0.1       -5        1    0     0        0        0         0    0     0       0.0        0   
+1399.2   3.0       2   1.37e-4   0       2    0.017  -1.7      0.1       -5        1    0     0        0        0         0    0     0       0.0        0
+1462.2   1.4       2   3.47e-4   0       2    0.017  -1.7      0.1       -5        1    0     0        0        0         0    0     0       0.0        0
+********************************************************************************************************************************************************************
+Interference between Resonances [numerical integration only]
+Note: + for positive, - for negative interference; +- if interference sign is unknown
+Ecm(keV) DEcm(keV) Jr   G1(eV)    DG1(eV)   L1   PT   DPT    G2(eV)     DG2(eV)    L2  PT	DPT    G3(eV)    DG3(eV)   L3  PT   DPT    Exf(keV)  
+!+- 
+0.0      0.0       0.0  0.0       0.0       0    0.0  0.0    0.0        0.0        0   0    0.0    0.0       0.0       0   0    0.0    0.0  
+0.0      0.0       0.0  0.0       0.0       0    0.0  0.0    0.0        0.0        0   0    0.0    0.0       0.0       0   0    0.0    0.0  
+********************************************************************************************************************************************************************
+Input file and PDF at NT selected temperatures only
+Note: default values are used for Input file range if Min=Max=0.0
+T9      Min     Max
+0.01    0.0     0.0
+0.1     0.0     0.0
+********************************************************************************************************************************************************************
+Comments: [Evaluator: Christian Iliadis; Date: 08/28/2024]
+ 1. A radius parameter of 0.95 fm gives a radius (R = 3.9 fm) closer to what was assumed for extracting alpha-particle spectroscopic factors in Tanabe et al. 1981
+    and Madhusoodhanan et al. 1999.
+ 2. Er = 2767 - 3756 keV: resonance strenghs from Endt 1990.
+ 3. Er = 2542, 2519, 2290 keV: partial widths are deduced from experimental values of wg_pg, wg_pa, wg_ag.
+ 4. Er = 2078 keV: the partial widths are estimated from wg_ag, Ga/G and Gg/G (Ross et al. 1995), and Gp from (3He,d).
+ 5. Er = 1916 keV: Ga and Gg from Aboud et al. 2018.
+ 6. Er = 1745 keV: experimental strength is the average from Rogers et al. 1977 and Toevs 1971.
+ 7. Er = 1555 keV: partial widths are deduced from measured wg_ag and lifetime (Babilon et al. 2002).
+ 8. Er = 170 to 1462 keV: Gg = 0.1 eV is an inconsequential guess.
+ 9. Er = 489 keV: total width is found from measured lifetime; Ga is estimated from experimental transfer spectroscopic factor (Tanabe et al. 1981, Madhusoodhanan 
+    et al. 1999).
+10. Direct capture (E2) is estimated using alpha spectroscopic factors listed in Table 2 of Madhusoodhanan et al. (1999).

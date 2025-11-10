@@ -1,0 +1,87 @@
+13N(a,p)16O
+*******************************************************************************************************************************************************************
+4He             ! Zproj
+13N             ! Ztarget
+1H              ! Zexitparticle (=0 when only 2 channels open)
+4He             ! Aproj
+13N             ! Atarget
+1H              ! Aexitparticle (=0 when only 2 channels open)
+4He             ! Jproj
+13N             ! Jtarget
+1H              ! Jexitparticle (=0 when only 2 channels open)
+AME             ! projectile separation energy
+AME             ! exit particle separation energy (=0 when only 2 channels open)
+1.9             ! Radius parameter R0 (fm)
+3               ! Gamma-ray channel number (=2 if ejectile is a g-ray; =3 otherwise)
+*******************************************************************************************************************************************************************
+1.0             ! Minimum energy for numerical integration (keV)
+50000           ! Number of random samples (>5000 for better statistics)
+0               ! =0 for rate output at all temperatures; =NT for rate output at selected temperatures
+0 0             ! (res, E) =0 for no correlation. =1 for correlation
+*******************************************************************************************************************************************************************
+Non-resonant table
+Enter comma-separated energies (keV) on 1st line, S-factors (keV.b) on 2nd line, and fractional uncertainties on 3rd line
+0 3259 3260    3650    4020    4370    4720    5050    5380    5700    6020
+0 0    5.20e+8 2.46e+8 2.17e+8 1.48e+8 1.06e+8 7.46e+7 4.86e+7 4.15e+7 4.07e+7
+0 0    -2.00   -1.50   -1.50   -1.35   -1.30   -1.30   -1.20   -1.20   -1.20
+0  0
+0  0
+0  0
+*******************************************************************************************************************************************************************
+Resonant Contribution
+Note: G1 = entrance channel, G2 = exit channel, G3 = spectator channel !! Ecm, Exf in (keV); wg, Gx in (eV) !!
+Note: if Er<0, theta^2=C2S*theta_sp^2 must be entered instead of entrance channel partial width
+Ecm(keV) DEcm(keV) wg(eV)     Dwg(eV)    J   G1(eV)    DG1(eV)   L1  G2(eV)    DG2(eV)   L2  G3(eV)    DG3(eV)   L3  Exf(keV) Int  Corr/Frac
+221.5    9.00      0          0          0.5 2.63e-10  -2.5      0   28e+3     -1.2      1   0.1       0.01      0   0.0      1
+742.5    20.0      0          0          0.5 1.88e+0   -2.5      1   200e+3    -1.2      0   0.1       0.01      0   0.0      1
+883.5    7.00      0          0          2.5 1.76e-2   -2.5      3   1.6e+3    -2.0      2   0.1       0.01      0   0.0      1
+1213.5   20.0      0          0          2.5 3.59e+1   -2.5      2   3.76e+3   -1.2      3   0.1       0.01      0   0.0      1
+1665.5   20.0      0          0          1.5 4.64e+3   -2.5      1   790.36e+3 -1.2      2   0.1       0.01      0   0.0      1
+1733.5   20.0      0          0          3.5 11e+0     -2.5      4   29.98e+3  -1.2      2   0.1       0.01      0   0.0      1
+1935.5   40.0      0          0          0.5 11e+3     -2.5      1   169e+3    -1.2      0   0.1       0.01      0   0.0      1
+2257.5   10.0      0          0          2.5 14e+3     -2.5      3   90e+3     -1.2      2   0.1       0.01      0   0.0      1
+2406.5   40.0      0          0          1.5 25e+3     -2.5      2   681e+3    -1.2      1   0.1       0.01      0   0.0      1
+********************************************************************************************************************************************************************
+Upper Limits of Resonances
+Note: enter partial width upper limit by chosing non-zero value for PT, where PT=<theta^2> for particles and PT=<B> for g-rays [enter: "upper_limit  0"];
+Note: for each resonance: # upper limits < # open channels! negative values of Dwg, DGx, DPT indicate factor uncertainties
+Ecm(keV) DEcm(keV) J   G1(eV)    DG1(eV) L1   PT      DPT     G2(eV)    DG2(eV)   L2   PT    DPT     G3(eV)    DG3(eV)   L3   PT   DPT     Exf(keV)   Int  Frac
+2.50     8.00      1.5 2e-283    -2      1    0.017    -1.7       180e+3   -1.2      2    0     0       0.1       0.01      0    0    0       0          1
+960.5    20.0      1.5 745       -2      1    0.017    -1.7      4.47e+3   -1.2      2    0     0       0.1       0.01      0    0    0       0          1    0.5
++                  0.5 1361      -2      0    0.017    -1.7      4.47e+3   -1.2      1    0     0       0.1       0.01      0    0    0       0          1  0.125
++                  0.5 745       -2      1    0.017    -1.7      4.47e+3   -1.2      0    0     0       0.1       0.01      0    0    0       0          1  0.125
++                  1.5 231       -2      2    0.017    -1.7      4.47e+3   -1.2      1    0     0       0.1       0.01      0    0    0       0          1  0.125
++                  2.5 231       -2      2    0.017    -1.7      4.47e+3   -1.2      3    0     0       0.1       0.01      0    0    0       0          1  0.125
+1543.5   20.0      1.5 5.46e4    -2      1    0.017    -1.7      7.20e+3   -1.2      2    0     0       0.1       0.01      0    0    0       0          1    0.5
++                  0.5 8.42e4    -2      0    0.017    -1.7      7.20e+3   -1.2      1    0     0       0.1       0.01      0    0    0       0          1  0.125
++                  0.5 5.46e4    -2      1    0.017    -1.7      7.20e+3   -1.2      0    0     0       0.1       0.01      0    0    0       0          1  0.125
++                  1.5 2.26e4    -2      2    0.017    -1.7      7.20e+3   -1.2      1    0     0       0.1       0.01      0    0    0       0          1  0.125
++                  2.5 2.26e4    -2      2    0.017    -1.7      7.20e+3   -1.2      3    0     0       0.1       0.01      0    0    0       0          1  0.125
+*******************************************************************************************************************************************************************
+Interference between Resonances [numerical integration only]
+Note: + for positive, - for negative interference; +- if interference sign is unknown
+Ecm(keV) DEcm(keV) Jr   G1(eV)    DG1(eV)   L1   PT   DPT    G2(eV)     DG2(eV)    L2  PT	DPT    G3(eV)    DG3(eV)   L3  PT   DPT    Exf
+!+-
+0.0      0.0       0.0  0.0       0.0       0    0.0  0.0    0.0        0.0        0   0    0.0    0.0       0.0       0   0    0.0    0.0
+0.0      0.0       0.0  0.0       0.0       0    0.0  0.0    0.0        0.0        0   0    0.0    0.0       0.0       0   0    0.0    0.0
+*******************************************************************************************************************************************************************
+Input file and PDF at NT selected temperatures only
+Note: default values are used for Input file range if Min=Max=0.0
+T9      Min     Max
+0.01    0.0     0.0
+0.1     0.0     0.0
+*******************************************************************************************************************************************************************
+Evaluator: A. Psaltis (04/2025)
+Comments:
+1. Resonance energies (corrected for nuclear masses) and spin/parities taken by Tilley et al. (1993)
+and updated according to the latest AME.
+2. Gamma_alpha assumed to have a factor uncertainty of 2.5 from 50% on the α-particle
+spectroscopic factor from the transfer reaction and a factor of 2 uncertainty from the assumption of the mirror
+symmetry (see also Mohr et al. 2014)
+3. Gamma_p assumed to have 20% uncertainty when not given (factor uncertainty -1.2)
+4. For the three directly measured resonances, Gamma_p and Gamma_alpha have same relative uncertainty as Gamma_tot
+5. For the three directly measured resonances, Gamma_p = Gamma_p0
+6. The direct capture S-factor has been calculated from the measurement of Jayatissa et al. (2022)
+using their cross section data with increased uncertainty, due to the use of stopping power tables
+7. For Er= 1932 and Er= 2252 keV, partial widths are taken from 16O(p,p), 16O(p,p') and 16O(p,a)13N measurements
+8. The radius parameter was set to 1.9 fm to match the calculations form the work of Meyer et al. (2020)

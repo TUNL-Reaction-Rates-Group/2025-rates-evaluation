@@ -8,7 +8,7 @@ This repository contains the RatesMC input files corresponding to the evaluation
 
 Each evaluated reaction is associated with an input file for the [RatesMC](https://github.com/rlongland/RatesMC) computer code. Installation instructions, dependencies, and details on how to run this program can be found [here](https://github.com/rlongland/RatesMC) and within the [Training](https://github.com/rlongland/RatesMC/tree/main/Training) directory inside the RatesMC repository (see RatesMCTraining.org).
 
-The 2025 evaluated reaction rates are published [here](https://nucldata.tunl.duke.edu/nucldata/index.shtml) and can also be found on [Zenodo](https://doi.org/10.5281/zenodo.17610211).
+The 2025 evaluated reaction rates are published [here](http://astrodata.tunl.duke.edu/build/html/ETR25.html) and can also be found on [Zenodo](https://doi.org/10.5281/zenodo.17610211).
 
 <!---
 This is a comment:
